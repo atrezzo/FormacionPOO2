@@ -10,6 +10,7 @@ namespace FormacionPOO.Herencia
         private string _modelo;
         protected int _velocidad;
         protected string _estado;
+        protected Radio _radio;
         #endregion
 
         #region Propiedades
@@ -42,6 +43,14 @@ namespace FormacionPOO.Herencia
             get
             {
                 return _velocidad;
+            }
+        }
+
+        public Radio Radio
+        {
+            get
+            {
+                return _radio;
             }
         }
 
