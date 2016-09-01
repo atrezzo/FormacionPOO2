@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FormacionPOO.Herencia.Avion">
+    <Position X="2" Y="3.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAgAAAAAAAAAigUAAAAEBAAAEIASAA=</HashCode>
+      <FileName>Herencia\Avion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FormacionPOO.Herencia.Coche">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAEgAAAAAAAACAQAAAAAgAAAAEAACEAAAAAAA=</HashCode>
+      <FileName>Herencia\Coche.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.117" />
+  </Class>
+  <Class Name="FormacionPOO.Herencia.Vehiculo">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAABBAgAAAOQAAAIAAAAAQAAAgAACAAAAgAgAAAEAg=</HashCode>
+      <FileName>Herencia\Vehiculo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
