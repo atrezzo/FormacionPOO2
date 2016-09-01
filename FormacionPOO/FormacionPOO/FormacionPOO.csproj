@@ -59,6 +59,7 @@
     <Compile Include="Radio\RadioSecuencial.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Herencia\ClassDiagramHerencia.cd" />
     <None Include="Radio\ClassDiagramRadio.cd" />
   </ItemGroup>
   <ItemGroup />
