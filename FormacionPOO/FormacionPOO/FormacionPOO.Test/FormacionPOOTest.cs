@@ -208,6 +208,27 @@ namespace FormacionPOO.Test
 
         }
 
+        /// <summary>
+        /// Modificadores de ámbito
+        /// <remarks>
+        /// Ejemplos de miembros publicos, privados y protected
+        /// </remarks>
+        /// </summary>
+        [TestMethod]
+        public void FormacionPOOTest_Ejemplo5()
+        {
+            var _radio = new Radio();
+            var _radioDigital = new RadioDigital();
 
+           
+            //private 
+            //_radio._frecuencia; //-- solo accesible desde class Radio NO accessible desde ningún lado. 
+            //protected 
+            //_radio._volumen; //-- NO accesible desde fuera de class RadioDigital, pero sí desde class Radio y RadioDigital.
+            //public
+            _radio.BajarVolumen(); //--  Accessible desde todos los sitios (class Radio, class RadioDigital, y cualquier otro lado, como aquí el test).
+            
+
+        }
     }
 }
