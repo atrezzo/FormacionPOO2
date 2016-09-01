@@ -1,5 +1,5 @@
-﻿
-using System;
+﻿using System;
+
 namespace FormacionPOO.Herencia
 {
     public abstract class Vehiculo : IVehiculo

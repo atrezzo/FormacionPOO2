@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FormacionPOO.Herencia
 {
-    public class Coche : Vehiculo, IVehiculo
+    public class Coche : Vehiculo, ICoche
     {
         #region Campos
         private string _matricula;

@@ -43,6 +43,8 @@
     <Compile Include="Coche.cs" />
     <Compile Include="Herencia\Avion.cs" />
     <Compile Include="Herencia\Coche.cs" />
+    <Compile Include="Herencia\IAvion.cs" />
+    <Compile Include="Herencia\ICoche.cs" />
     <Compile Include="Herencia\IVehiculo.cs" />
     <Compile Include="Herencia\Vehiculo.cs" />
     <Compile Include="Motor.cs" />

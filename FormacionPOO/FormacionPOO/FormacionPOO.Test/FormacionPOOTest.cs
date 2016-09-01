@@ -33,35 +33,6 @@ namespace FormacionPOO.Test
         }
 
         
-
-        private Coche CrearDeportivo()
-        {
-            var _motorDeportivo = new Motor
-            {
-                Cilindrada = 3000,
-                Combustible = "GASOLINA",
-                Potencia = 300
-            };
-
-            var _coche = new Coche("ROJO", "FERRARI", "TESTARROSA", 2, _motorDeportivo);
-
-            return _coche;
-        }
-
-        private Coche CrearTurismo()
-        {
-            var _motorTurismo = new Motor
-            {
-                Cilindrada = 1500,
-                Combustible = "GASOLINA",
-                Potencia = 70
-            };
-
-            var _coche = new Coche("BLANCO", "SEAT", "PANDA", 3, _motorTurismo);
-
-            return _coche;
-        }
-
         /// <summary>
         /// Diapositiva 
         /// </summary>
