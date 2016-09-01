@@ -10,7 +10,7 @@ namespace FormacionPOO.Herencia
         private string _modelo;
         protected int _velocidad;
         protected string _estado;
-        protected Radio _radio;
+        protected IRadio _radio;
         #endregion
 
         #region Propiedades
@@ -46,7 +46,7 @@ namespace FormacionPOO.Herencia
             }
         }
 
-        public Radio Radio
+        public IRadio Radio
         {
             get
             {
@@ -109,6 +109,7 @@ namespace FormacionPOO.Herencia
             _color = color;
             _marca = marca;
             _modelo = modelo;
+            _radio = new Radio(); //new RadioSecuencial(); --> Cumplen misma interfaz.
         }
 
         // Destructor

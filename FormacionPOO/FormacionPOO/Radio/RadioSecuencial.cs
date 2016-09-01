@@ -10,7 +10,7 @@ namespace FormacionPOO
     /// <summary>
     /// Radio simulando programación secuencial.
     /// </summary>
-    public class RadioSecuencial
+    public class RadioSecuencial : IRadio
     {
         private int _numdiodos = 3;
         private int _volumen;
@@ -22,8 +22,6 @@ namespace FormacionPOO
         private double _señalModulada = 0;
         private enumFrecuenciaSintonizado _tiposintonizado;
         private string mascaraLcd = "LCD: Emisora {0}: {1} - Volumen: {2}";
-
-
 
         public double DemodularSeñal(int numeroAumentos, enumDiscriminador tipoDiscriminador)
         {
@@ -39,10 +37,7 @@ namespace FormacionPOO
                 _señalModulada = _señalModulada % 120;
             }
 
-
-
             return _señalModulada;
-
         }
 
         public void AumentarDecibelios()
