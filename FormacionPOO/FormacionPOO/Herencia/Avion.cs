@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FormacionPOO.Herencia
 {
-    public class Avion : Vehiculo, IVehiculo
+    public class Avion : Vehiculo, IAvion
     {
         #region Campos
         private int _numeroMotores;
