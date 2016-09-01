@@ -9,7 +9,7 @@ namespace FormacionPOO.Test
     public class FormacionPOOTest
     {
         [TestMethod]
-        public void FormacionPOOTest_Ejemplo1() 
+        public void FormacionPOOTest_Ejemplo1()
         {
             // Crear coche 1: turismo.
             var _motorTurismo = new Motor
@@ -34,7 +34,7 @@ namespace FormacionPOO.Test
             Assert.IsNotNull(_turismo);
         }
 
-        
+
         /// <summary>
         /// Diapositiva 
         /// </summary>
@@ -42,9 +42,9 @@ namespace FormacionPOO.Test
         public void FormacionPOOTest_Ejemplo2_POO()
         {
             // Crear radio POO.
-            IRadio _radio = new Radio();
+            Radio _radio = new Radio();
 
-           
+
 
             // Recorrido turismo.
             _radio.VerPantallaLcd();
@@ -69,7 +69,7 @@ namespace FormacionPOO.Test
         public void FormacionPOOTest_Ejemplo2_Secuencial()
         {
             // Crear radio secuencial.
-            IRadio _radio = new RadioSecuencial();
+            RadioSecuencial _radio = new RadioSecuencial();
 
 
 
@@ -115,7 +115,7 @@ namespace FormacionPOO.Test
 
             _avion.Arrancar();
             _avion.Acelerar(220); //Vamos a 220 kmh - Podemos despegar.
-            _avion.Despegar(); 
+            _avion.Despegar();
             _avion.Acelerar(680); //Vamos a 900kmH - volando.
 
 
@@ -136,7 +136,7 @@ namespace FormacionPOO.Test
 
             _avion.Frenar(110);
             _avion.Frenar(90); //Parados.
-            
+
             //OK
 
             _turismo.Arrancar();
@@ -144,12 +144,12 @@ namespace FormacionPOO.Test
             _turismo.Frenar(100);
             _turismo.Frenar(120);
             //OK
-           
+
 
             Assert.IsTrue(true);
         }
 
-        
+
         /// <summary>
         /// polimorfismo
         /// <remarks>
@@ -160,14 +160,54 @@ namespace FormacionPOO.Test
         public void FormacionPOOTest_Ejemplo4()
         {
             RadioDigital _radioDigital = new RadioDigital();
-           
+
             _radioDigital.SubirVolumen(5); //5
             _radioDigital.SubirVolumen(); //6
             _radioDigital.BajarVolumen(2, false); //4 + No mostrar por pantalla
             _radioDigital.BajarVolumen(); //3
             _radioDigital.BajarVolumen(3); //0
- 
+
         }
+
+        /// <summary>
+        /// interfaz
+        /// <remarks>
+        /// Las dos clases tiene el contrato IRadio.
+        /// </remarks>
+        /// </summary>
+        [TestMethod]
+        public void FormacionPOOTest_Ejemplo5()
+        {
+            bool ES_RADIO_POO = true;
+            IRadio _radio;
+            if (ES_RADIO_POO)
+            {
+                _radio = new Radio();
+            }
+            else
+            {
+                _radio = new RadioSecuencial();
+            }
+            //o
+
+
+            // Recorrido turismo.
+            _radio.VerPantallaLcd();
+            _radio.SubirVolumen();
+            _radio.SubirVolumen();
+            _radio.SubirVolumen();
+            _radio.BajarVolumen();
+            _radio.BuscarNuevaEmisora();
+            _radio.SubirVolumen();
+            _radio.BuscarNuevaEmisora();
+            _radio.BajarVolumen();
+            _radio.BajarVolumen();
+            _radio.BajarVolumen();
+
+            Assert.IsTrue(true);
+
+        }
+
 
     }
 }
