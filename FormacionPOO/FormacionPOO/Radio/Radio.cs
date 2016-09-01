@@ -26,9 +26,9 @@ namespace FormacionPOO
     public class Radio : IRadio
     {
         #region Campos (Atributos - Estado)
-        private int _volumen;
+        protected int _volumen;
         private double _frecuencia;
-        private Circuteria _circuteria; //Relación agregación
+        protected Circuteria _circuteria; //Relación agregación
         #endregion
 
         // Constructor
@@ -48,14 +48,14 @@ namespace FormacionPOO
 
         #region Métodos (Comportamiento)
 
-        public void SubirVolumen()
+        public virtual void SubirVolumen()
         {
             if (_volumen < 10) _volumen++;
             _circuteria.CambiarVolumen(_volumen);
             VerPantallaLcd();
         }
 
-        public void BajarVolumen()
+        public virtual void BajarVolumen()
         {
             if (_volumen > 0) _volumen--;
             _circuteria.CambiarVolumen(_volumen);

@@ -42,8 +42,8 @@ namespace FormacionPOO
         public void CambiarVolumen(int nuevoVolumen)
         {
             int nuevoPuntoVolumen = nuevoVolumen * 10;
-            if (nuevoPuntoVolumen > 0 && nuevoPuntoVolumen <= 100)
-            {
+            //if (nuevoPuntoVolumen > 0 && nuevoPuntoVolumen <= 100)
+            //{
 
                 int diferenciaAumento = nuevoPuntoVolumen - _puntoVolumen;
                 for (int i = 0; i < Math.Abs(diferenciaAumento); i++)
@@ -59,7 +59,7 @@ namespace FormacionPOO
                         _amplificador.AumentarDecibelios();
                 }
                 _puntoVolumen = nuevoPuntoVolumen;
-            }
+            //}
 
             if (_puntoVolumen > 0)
                 _antena.Encender();

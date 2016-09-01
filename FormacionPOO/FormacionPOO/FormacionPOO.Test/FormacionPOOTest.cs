@@ -90,7 +90,10 @@ namespace FormacionPOO.Test
         }
 
         /// <summary>
-        /// Poliformismo
+        /// polimorfismo
+        /// <remarks>
+        /// El metodo Frenar() es el metodo que aplica polimorfismo.
+        /// </remarks>
         /// </summary>
         [TestMethod]
         public void FormacionPOOTest_Ejemplo3()
@@ -144,6 +147,26 @@ namespace FormacionPOO.Test
            
 
             Assert.IsTrue(true);
+        }
+
+        
+        /// <summary>
+        /// polimorfismo
+        /// <remarks>
+        /// El metodo Frenar() es el metodo que aplica polimorfismo.
+        /// </remarks>
+        /// </summary>
+        [TestMethod]
+        public void FormacionPOOTest_Ejemplo4()
+        {
+            RadioDigital _radioDigital = new RadioDigital();
+           
+            _radioDigital.SubirVolumen(5); //5
+            _radioDigital.SubirVolumen(); //6
+            _radioDigital.BajarVolumen(2, false); //4 + No mostrar por pantalla
+            _radioDigital.BajarVolumen(); //3
+            _radioDigital.BajarVolumen(3); //0
+ 
         }
 
     }
