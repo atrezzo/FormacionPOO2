@@ -40,7 +40,7 @@ namespace FormacionPOO.Test
         public void FormacionPOOTest_Ejemplo2_POO()
         {
             // Crear radio POO.
-            var _radio = new Radio();
+            IRadio _radio = new Radio();
 
            
 
@@ -64,7 +64,7 @@ namespace FormacionPOO.Test
         public void FormacionPOOTest_Ejemplo2_Secuencial()
         {
             // Crear radio secuencial.
-            var _radio = new RadioSecuencial();
+            IRadio _radio = new RadioSecuencial();
 
 
 

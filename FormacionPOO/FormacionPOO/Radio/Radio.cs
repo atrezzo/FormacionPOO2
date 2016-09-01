@@ -23,7 +23,7 @@ namespace FormacionPOO
     /// <summary>
     /// Radio común en POO.
     /// </summary>
-    public class Radio
+    public class Radio : IRadio
     {
         #region Campos (Atributos - Estado)
         private int _volumen;
