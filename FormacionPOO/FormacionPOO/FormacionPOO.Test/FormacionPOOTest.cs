@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FormacionPOO.Herencia;
+using System.Diagnostics;
 
 namespace FormacionPOO.Test
 {
@@ -17,7 +19,7 @@ namespace FormacionPOO.Test
                 Potencia = 70
             };
 
-            var _turismo = new Coche("CELESTE", "SEAT", "PANDA", 3, _motorTurismo);
+            var _turismo = new Coche("CELESTE", "SEAT", "PANDA", 1, _motorTurismo);
 
             // Crear coche 2: deportivo.
             var _motorDeportivo = new Motor
@@ -60,6 +62,9 @@ namespace FormacionPOO.Test
             Assert.IsTrue(true);
         }
 
+        /// <summary>
+        /// Abstracción/Encapsulamiento
+        /// </summary>
         [TestMethod]
         public void FormacionPOOTest_Ejemplo2_Secuencial()
         {
@@ -80,6 +85,63 @@ namespace FormacionPOO.Test
             _radio.BajarVolumen();
             _radio.BajarVolumen();
             _radio.BajarVolumen();
+
+            Assert.IsTrue(true);
+        }
+
+        /// <summary>
+        /// Poliformismo
+        /// </summary>
+        [TestMethod]
+        public void FormacionPOOTest_Ejemplo3()
+        {
+            // Crear coche: turismo.
+            var _motorTurismo = new Motor
+            {
+                Cilindrada = 1500,
+                Combustible = "DIESEL",
+                Potencia = 70
+            };
+
+            // Crear coche.
+            FormacionPOO.Herencia.Coche _turismo = new FormacionPOO.Herencia.Coche("CELESTE", "SEAT", "PANDA", 1, _motorTurismo);
+
+            // Crear avión.
+            FormacionPOO.Herencia.Avion _avion = new FormacionPOO.Herencia.Avion("BLANCO", "BOEING", "747", 4, 13000, 220, 200);
+
+
+            _avion.Arrancar();
+            _avion.Acelerar(220); //Vamos a 220 kmh - Podemos despegar.
+            _avion.Despegar(); 
+            _avion.Acelerar(680); //Vamos a 900kmH - volando.
+
+
+
+            try
+            {
+                _avion.Frenar(100);  //Vamos a 800kmh - NO se puede aterrizar!!
+                _avion.Aterrizar(); //
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message); //El avión no puede aterrizar. Los parámetros de aterrizaje no son correctos."
+            }
+
+            _avion.Frenar(600); //800kmh - 600kmh = 200Kmh. Ya estamos en velocidad de aterrizaje!
+            _avion.Aterrizar();
+
+            _avion.Frenar(110);
+            _avion.Frenar(90); //Parados.
+            
+            //OK
+
+            _turismo.Arrancar();
+            _turismo.Acelerar(220);
+            _turismo.Frenar(100);
+            _turismo.Frenar(120);
+            //OK
+           
 
             Assert.IsTrue(true);
         }
