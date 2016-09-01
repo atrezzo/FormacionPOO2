@@ -55,6 +55,7 @@ namespace FormacionPOO.Herencia
         #endregion
 
         #region Métodos
+
         public override void Frenar(int velocidad)
         {
             if (this._estado == "Parado" || this._estado == "Arrancado")
@@ -62,7 +63,7 @@ namespace FormacionPOO.Herencia
                 throw new Exception("El vehículo no está en movimiento. No se puede frenar.");
             }
 
-            if (velocidad > this._velocidad)
+            if (velocidad >= this._velocidad)
             {
                 if (this._volando == false)
                 {
@@ -74,12 +75,17 @@ namespace FormacionPOO.Herencia
                     throw new Exception("La velocidad del vehículo en el aire no puede ser 0 km/h.");
                 }
             }
-
-            this._velocidad = this._velocidad - velocidad;
-
-            if (this._velocidad < this._velocidadAterrizaje)
+            else
             {
-                throw new Exception(String.Format("La velocidad del vehículo no puede ser menor a la velocidad de aterrizaje: {0} km/h.", this._velocidadAterrizaje));
+                this._velocidad = this._velocidad - velocidad;
+
+                if (this._volando == true)
+                {
+                    if (this._velocidad < this._velocidadAterrizaje)
+                    {
+                        throw new Exception(String.Format("La velocidad del vehículo no puede ser menor a la velocidad de aterrizaje: {0} km/h.", this._velocidadAterrizaje));
+                    }
+                }
             }
         }
 

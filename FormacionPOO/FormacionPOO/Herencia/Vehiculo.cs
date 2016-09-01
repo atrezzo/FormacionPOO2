@@ -99,6 +99,7 @@ namespace FormacionPOO.Herencia
         }
 
         public abstract void Frenar(int velocidad);
+
         #endregion
 
         // Constructor

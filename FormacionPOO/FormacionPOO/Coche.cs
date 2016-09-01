@@ -129,8 +129,8 @@ namespace FormacionPOO
 
             this._velocidad = this._velocidad + velocidad;
         }
-                
-        public void Frenar(int velocidad) 
+
+        public void Frenar(int velocidad)
         {
             if (this._estado == "Parado" || this._estado == "Arrancado")
             {
@@ -142,12 +142,15 @@ namespace FormacionPOO
                 this._velocidad = 0;
                 this._estado = "Arrancado";
             }
-
-            this._velocidad = this._velocidad - velocidad;
-
-            if (this._velocidad == 0) 
+            else
             {
-                this._estado = "Arrancado";
+                this._velocidad = this._velocidad - velocidad;
+
+                if (this._velocidad < 0)
+                {
+                    this._velocidad = 0;
+                    this._estado = "Arrancado";
+                }
             }
         }
         #endregion

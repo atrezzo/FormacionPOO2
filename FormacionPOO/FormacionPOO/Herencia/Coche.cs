@@ -46,6 +46,7 @@ namespace FormacionPOO.Herencia
         #endregion
 
         #region Métodos
+
         public void Matricular(string matricula)
         {
             this._matricula = matricula;
@@ -63,18 +64,22 @@ namespace FormacionPOO.Herencia
                 base._velocidad = 0;
                 base._estado = "Arrancado";
             }
-
-            base._velocidad = base._velocidad - velocidad;
-
-            if (base._velocidad == 0)
+            else
             {
-                base._estado = "Arrancado";
+                base._velocidad = base._velocidad - velocidad;
+
+                if (base._velocidad < 0)
+                {
+                    base._velocidad = 0;
+                    base._estado = "Arrancado";
+                }
             }
         }
         #endregion
-        
 
-        public Coche(string color, string marca, string modelo, int numeroPuertas, Motor motor) : base(color, marca, modelo)
+
+        public Coche(string color, string marca, string modelo, int numeroPuertas, Motor motor)
+            : base(color, marca, modelo)
         {
             this._numeroRuedas = 4;
             this._numeroPuertas = numeroPuertas;
