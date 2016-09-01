@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Avion.cs" />
     <Compile Include="Coche.cs" />
     <Compile Include="Herencia\Avion.cs" />
     <Compile Include="Herencia\Coche.cs" />
