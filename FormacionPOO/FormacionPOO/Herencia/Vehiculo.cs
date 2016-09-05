@@ -14,23 +14,9 @@ namespace FormacionPOO.Herencia
         #endregion
 
         #region Propiedades
-        public string Color
-        {
-            get
-            {
-                return _color;
-            }
-
-            set 
-            {
-                _color = value;
-            }
-        }
-
+        public string Color { get; set; }
         public string Marca { get; set; }
-        
         public string Modelo { get; set; }
-
         public IRadio Radio { get; set; }
 
         public int Velocidad
