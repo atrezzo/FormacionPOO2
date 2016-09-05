@@ -39,7 +39,7 @@ namespace FormacionPOO.Herencia
             }
         }
         #endregion
-
+           
         #region Métodos
         public void Arrancar()
         {
