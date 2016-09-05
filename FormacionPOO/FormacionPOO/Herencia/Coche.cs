@@ -9,6 +9,7 @@ namespace FormacionPOO.Herencia
         private int _numeroRuedas;
         private int _numeroPuertas;
         private Motor _motor;
+        private string _tipoTerreno;
         #endregion
 
         #region Propiedades
@@ -28,21 +29,11 @@ namespace FormacionPOO.Herencia
             }
         }
 
-        public int NumeroPuertas
-        {
-            get
-            {
-                return _numeroPuertas;
-            }
-        }
+        public int NumeroPuertas { get; set; }
+        
+        public Motor Motor  { get; set; }
 
-        public Motor Motor
-        {
-            get
-            {
-                return _motor;
-            }
-        }
+        public string TipoTerreno { get; set; }
         #endregion
 
         #region Métodos
@@ -77,13 +68,21 @@ namespace FormacionPOO.Herencia
         }
         #endregion
 
+        #region Constructores
+        public Coche() 
+        {
+            this._numeroRuedas = 4;
+            this._motor = new Motor();
+        }
 
-        public Coche(string color, string marca, string modelo, int numeroPuertas, Motor motor)
+        public Coche(string color, string marca, string modelo, int numeroPuertas, Motor motor, string tipoTerreno)
             : base(color, marca, modelo)
         {
             this._numeroRuedas = 4;
             this._numeroPuertas = numeroPuertas;
             this._motor = motor;
+            this._tipoTerreno = tipoTerreno;
         }
+        #endregion
     }
 }

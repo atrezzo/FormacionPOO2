@@ -46,6 +46,8 @@
     <Compile Include="Herencia\IAvion.cs" />
     <Compile Include="Herencia\ICoche.cs" />
     <Compile Include="Herencia\IVehiculo.cs" />
+    <Compile Include="Herencia\IVehiculoAereo.cs" />
+    <Compile Include="Herencia\IVehiculoTerrestre.cs" />
     <Compile Include="Herencia\Vehiculo.cs" />
     <Compile Include="Motor.cs" />
     <Compile Include="Radio\AmplificadorRadioFrecuencia.cs" />

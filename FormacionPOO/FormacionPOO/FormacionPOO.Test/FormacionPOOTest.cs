@@ -8,6 +8,9 @@ namespace FormacionPOO.Test
     [TestClass]
     public class FormacionPOOTest
     {
+        /// <summary>
+        /// Clase - Objeto
+        /// </summary>
         [TestMethod]
         public void FormacionPOOTest_Ejemplo1()
         {
@@ -33,7 +36,6 @@ namespace FormacionPOO.Test
 
             Assert.IsNotNull(_turismo);
         }
-
 
         /// <summary>
         /// Diapositiva 
@@ -107,7 +109,7 @@ namespace FormacionPOO.Test
             };
 
             // Crear coche.
-            FormacionPOO.Herencia.Coche _turismo = new FormacionPOO.Herencia.Coche("CELESTE", "SEAT", "PANDA", 1, _motorTurismo);
+            FormacionPOO.Herencia.Coche _turismo = new FormacionPOO.Herencia.Coche("CELESTE", "SEAT", "PANDA", 1, _motorTurismo, "CARRETERA");
 
             // Crear avión.
             FormacionPOO.Herencia.Avion _avion = new FormacionPOO.Herencia.Avion("BLANCO", "BOEING", "747", 4, 13000, 220, 200);
@@ -149,7 +151,6 @@ namespace FormacionPOO.Test
             Assert.IsTrue(true);
         }
 
-
         /// <summary>
         /// polimorfismo
         /// <remarks>
@@ -180,6 +181,7 @@ namespace FormacionPOO.Test
         {
             bool ES_RADIO_POO = true;
             IRadio _radio;
+
             if (ES_RADIO_POO)
             {
                 _radio = new Radio();
@@ -188,10 +190,8 @@ namespace FormacionPOO.Test
             {
                 _radio = new RadioSecuencial();
             }
-            //o
 
-
-            // Recorrido turismo.
+            // Funcionamiento radio.
             _radio.VerPantallaLcd();
             _radio.SubirVolumen();
             _radio.SubirVolumen();
@@ -209,13 +209,62 @@ namespace FormacionPOO.Test
         }
 
         /// <summary>
+        /// interfaz (aplicación)
+        /// <remarks>
+        /// Las dos clases tiene el contrato IRadio.
+        /// </remarks>
+        /// </summary>
+        [TestMethod]
+        public void FormacionPOOTest_Ejemplo6() 
+        {
+            bool ES_RADIO_POO = true;
+            IRadio _radio;
+
+            if (ES_RADIO_POO)
+            {
+                _radio = new Radio();
+            }
+            else
+            {
+                _radio = new RadioSecuencial();
+            }
+
+            // Crear turismo.
+            var _motorTurismo = new Motor
+            {
+                Cilindrada = 1500,
+                Combustible = "DIESEL",
+                Potencia = 70
+            };
+
+            FormacionPOO.Herencia.Coche _turismo = new FormacionPOO.Herencia.Coche("CELESTE", "SEAT", "PANDA", 1, _motorTurismo, "CARRETERA");
+
+            // Utilizar radio del turismo.
+            _turismo.Radio.VerPantallaLcd();
+
+            // EJERCICIO: Cambiar la radio del coche.
+
+            Assert.IsTrue(true);
+        }
+
+        /// <summary>
+        /// interfaz (implementación múltiple)
+        /// </summary>
+        public void FormacionPOOTest_Ejemplo7() 
+        {
+            // EJERCICIO: implementar HIDROAVION.
+
+            Assert.IsTrue(true);
+        }
+
+        /// <summary>
         /// Modificadores de ámbito
         /// <remarks>
         /// Ejemplos de miembros publicos, privados y protected
         /// </remarks>
         /// </summary>
         [TestMethod]
-        public void FormacionPOOTest_Ejemplo5()
+        public void FormacionPOOTest_Ejemplo8()  
         {
             var _radio = new Radio();
             var _radioDigital = new RadioDigital();
@@ -229,6 +278,6 @@ namespace FormacionPOO.Test
             _radio.BajarVolumen(); //--  Accessible desde todos los sitios (class Radio, class RadioDigital, y cualquier otro lado, como aquí el test).
             
 
-        }
+        } 
     }
 }

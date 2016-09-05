@@ -20,37 +20,24 @@ namespace FormacionPOO.Herencia
             {
                 return _color;
             }
-        }
 
-        public string Marca
-        {
-            get
+            set 
             {
-                return _marca;
+                _color = value;
             }
         }
 
-        public string Modelo
-        {
-            get
-            {
-                return _modelo;
-            }
-        }
+        public string Marca { get; set; }
+        
+        public string Modelo { get; set; }
+
+        public IRadio Radio { get; set; }
 
         public int Velocidad
         {
             get
             {
                 return _velocidad;
-            }
-        }
-
-        public IRadio Radio
-        {
-            get
-            {
-                return _radio;
             }
         }
 
@@ -102,21 +89,31 @@ namespace FormacionPOO.Herencia
 
         #endregion
 
-        // Constructor
+        #region Constructores y Destructores
+        // Constructor sin parámetros.
+        public Vehiculo() 
+        {
+            _velocidad = 0;
+            _estado = "Parado";
+            _radio = new Radio(); //new RadioSecuencial(); --> Cumplen misma interfaz.
+        }
+
+        // Constructor con parámetros.
         public Vehiculo(string color, string marca, string modelo)
         {
             _velocidad = 0;
             _estado = "Parado";
+            _radio = new Radio(); //new RadioSecuencial(); --> Cumplen misma interfaz.
             _color = color;
             _marca = marca;
             _modelo = modelo;
-            _radio = new Radio(); //new RadioSecuencial(); --> Cumplen misma interfaz.
         }
 
-        // Destructor
+        // Destructor.
         ~Vehiculo()
         {
             _velocidad = 0;
         }
+        #endregion
     }
 }

@@ -2,7 +2,7 @@
 
 namespace FormacionPOO.Herencia
 {
-    public interface ICoche : IVehiculo
+    interface ICoche : IVehiculoTerrestre
     {
         string Matricula { get; }
         Motor Motor { get; }
