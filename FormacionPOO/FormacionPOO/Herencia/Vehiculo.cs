@@ -11,26 +11,13 @@ namespace FormacionPOO.Herencia
         protected int _velocidad;
         protected string _estado;
         protected IRadio _radio;
+        // soy paco.
         #endregion
 
         #region Propiedades
-        public string Color
-        {
-            get
-            {
-                return _color;
-            }
-
-            set 
-            {
-                _color = value;
-            }
-        }
-
+        public string Color { get; set; }
         public string Marca { get; set; }
-        
         public string Modelo { get; set; }
-
         public IRadio Radio { get; set; }
 
         public int Velocidad

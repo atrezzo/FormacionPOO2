@@ -14,32 +14,25 @@ namespace FormacionPOO
         private int _numeroRuedas;
         private int _numeroPuertas;
         private Motor _motor;
+        private string _tipoTerreno;
         #endregion
 
-        #region Propiedades
+        #region Propiedades (Estado)
         public string Color
         {
             get
             {
                 return _color;
             }
-        }
 
-        public string Marca
-        {
-            get
+            set
             {
-                return _marca;
+                _color = value;
             }
         }
 
-        public string Modelo
-        {
-            get
-            {
-                return _modelo;
-            }
-        }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
 
         public int Velocidad
         {
@@ -76,21 +69,9 @@ namespace FormacionPOO
             }
         }
 
-        public int NumeroPuertas
-        {
-            get
-            {
-                return _numeroPuertas;
-            }
-        }
-
-        public Motor Motor
-        {
-            get
-            {
-                return _motor;
-            }
-        }
+        public int NumeroPuertas { get; set; }
+        public Motor Motor { get; set; }
+        public string TipoTerreno { get; set; }
         #endregion
 
         #region Métodos (Comportamiento)
@@ -156,7 +137,13 @@ namespace FormacionPOO
         #endregion
 
 
-        // Constructor
+        // Constructores
+        public Coche()
+        {
+            this._numeroRuedas = 4;
+            this._motor = new Motor();
+        }
+
         public Coche(string color, string marca, string modelo, int numeroPuertas, Motor motor)
         {
             _numeroRuedas = 4;

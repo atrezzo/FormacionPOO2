@@ -30,9 +30,7 @@ namespace FormacionPOO.Herencia
         }
 
         public int NumeroPuertas { get; set; }
-        
         public Motor Motor  { get; set; }
-
         public string TipoTerreno { get; set; }
         #endregion
 
