@@ -11,6 +11,7 @@ namespace FormacionPOO.Herencia
         protected int _velocidad;
         protected string _estado;
         protected IRadio _radio;
+        // soy paco.
         #endregion
 
         #region Propiedades
