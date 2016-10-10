@@ -1,7 +1,7 @@
 ﻿
 namespace FormacionPOO.Herencia
 {
-    interface IVehiculoAereo : IVehiculo
+    public interface IVehiculoAereo : IVehiculo
     {
         int MaximaAltitud { get; }
         bool Volando { get; }

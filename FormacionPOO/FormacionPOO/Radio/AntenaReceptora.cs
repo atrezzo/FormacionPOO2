@@ -50,6 +50,8 @@ namespace FormacionPOO
             _encendido = false;
         }
 
+
+
         #endregion
     }
 }

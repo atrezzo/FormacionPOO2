@@ -5,7 +5,6 @@ namespace FormacionPOO.Herencia
     public class Coche : Vehiculo, ICoche
     {
         #region Campos
-        private string _matricula;
         private int _numeroRuedas;
         private int _numeroPuertas;
         private Motor _motor;
@@ -13,13 +12,7 @@ namespace FormacionPOO.Herencia
         #endregion
 
         #region Propiedades
-        public string Matricula
-        {
-            get
-            {
-                return _matricula;
-            }
-        }
+        
 
         public int NumeroRuedas
         {
@@ -36,10 +29,6 @@ namespace FormacionPOO.Herencia
 
         #region Métodos
 
-        public void Matricular(string matricula)
-        {
-            this._matricula = matricula;
-        }
 
         public override void Frenar(int velocidad)
         {

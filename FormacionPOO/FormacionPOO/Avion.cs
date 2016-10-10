@@ -150,7 +150,7 @@ namespace FormacionPOO
                 }
                 else
                 {
-                    throw new Exception("La velocidad del vehículo en el aire no puede ser 0 km/h.");
+                    throw new Exception("La _velocidad del vehículo en el aire no puede ser 0 km/h.");
                 }
             }
             else
@@ -161,7 +161,7 @@ namespace FormacionPOO
                 {
                     if (this._velocidad < this._velocidadAterrizaje)
                     {
-                        throw new Exception(String.Format("La velocidad del vehículo no puede ser menor a la velocidad de aterrizaje: {0} km/h.", this._velocidadAterrizaje));
+                        throw new Exception(String.Format("La _velocidad del vehículo no puede ser menor a la _velocidad de aterrizaje: {0} km/h.", this._velocidadAterrizaje));
                     }
                 }
             }

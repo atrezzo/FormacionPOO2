@@ -2,7 +2,7 @@
 
 namespace FormacionPOO.Herencia
 {
-    interface IAvion : IVehiculoAereo
+    public interface IAvion : IVehiculoAereo
     {
         int NumeroMotores { get; }
         int VelocidadAterrizaje { get; }

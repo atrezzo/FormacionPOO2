@@ -5,11 +5,11 @@ namespace FormacionPOO.Herencia
     public class Avion : Vehiculo, IAvion
     {
         #region Campos
-        private int _numeroMotores;
-        private int _maximaAltitud;
-        private int _velocidadDespegue;
-        private int _velocidadAterrizaje;
-        private bool _volando;
+        protected int _numeroMotores;
+        protected int _maximaAltitud;
+        protected int _velocidadDespegue;
+        protected int _velocidadAterrizaje;
+        protected bool _volando;
         #endregion
 
         #region Propiedades

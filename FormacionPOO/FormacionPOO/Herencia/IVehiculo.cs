@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormacionPOO.Herencia
 {
-    interface IVehiculo
+    public interface IVehiculo
     {
         string Color { get; }
         string Marca { get; }

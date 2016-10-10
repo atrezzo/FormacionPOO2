@@ -11,6 +11,7 @@ namespace FormacionPOO.Herencia
         protected int _velocidad;
         protected string _estado;
         protected IRadio _radio;
+        private string _matricula;
         // soy paco.
         #endregion
 
@@ -19,6 +20,13 @@ namespace FormacionPOO.Herencia
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public IRadio Radio { get; set; }
+        public string Matricula
+        {
+            get
+            {
+                return _matricula;
+            }
+        }
 
         public int Velocidad
         {
@@ -39,7 +47,7 @@ namespace FormacionPOO.Herencia
             }
         }
         #endregion
-           
+
         #region Métodos
         public void Arrancar()
         {
@@ -57,7 +65,7 @@ namespace FormacionPOO.Herencia
             }
         }
 
-        public void Acelerar(int velocidad) 
+        public void Acelerar(int velocidad)
         {
             if (this._estado == "Parado")
             {
@@ -72,13 +80,19 @@ namespace FormacionPOO.Herencia
             this._velocidad = this._velocidad + velocidad;
         }
 
+
+        public void Matricular(string matricula)
+        {
+            this._matricula = matricula;
+        }
+
         public abstract void Frenar(int velocidad);
 
         #endregion
 
         #region Constructores y Destructores
         // Constructor sin parámetros.
-        public Vehiculo() 
+        public Vehiculo()
         {
             _velocidad = 0;
             _estado = "Parado";

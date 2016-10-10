@@ -61,12 +61,18 @@ namespace FormacionPOO
                 _puntoVolumen = nuevoPuntoVolumen;
             //}
 
+                GestionarAntena();
+
+        }
+
+        private void GestionarAntena()
+        {
             if (_puntoVolumen > 0)
                 _antena.Encender();
             else
                 _antena.Apagar();
-
         }
+
 
         public double EscanearSiguienteFrecuencia(int numAumentos)
         {

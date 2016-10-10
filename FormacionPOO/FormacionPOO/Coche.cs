@@ -6,8 +6,6 @@ namespace FormacionPOO
     {
         #region Campos (Estado)
         private string _color;
-        private string _marca;
-        private string _modelo;
         private int _velocidad;
         private string _estado;
         private string _matricula;
@@ -96,7 +94,7 @@ namespace FormacionPOO
             }
         }
 
-        public void Acelerar(int velocidad) 
+        public void Acelerar(int _velocidad) 
         {
             if (this._estado == "Parado")
             {
@@ -108,7 +106,7 @@ namespace FormacionPOO
                 this._estado = "En movimiento";
             }
 
-            this._velocidad = this._velocidad + velocidad;
+            this._velocidad = this._velocidad + _velocidad;
         }
 
         public void Frenar(int velocidad)
@@ -150,8 +148,8 @@ namespace FormacionPOO
             _velocidad = 0;
             _estado = "Parado";
             _color = color;
-            _marca = marca;
-            _modelo = modelo;
+            Marca = marca;
+            Modelo = modelo;
             _numeroPuertas = numeroPuertas;
             _motor = motor;
         }
